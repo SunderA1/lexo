@@ -9,11 +9,10 @@ chai.use(chaiHttp);
 
 var API_SERVER = chai.request('localhost:4000');
 
-describe('/POST login', () => {
+describe('/GET login', () => {
     it('it should login', (done) => {
       API_SERVER
-      .post('/login')
-      .send({emailId : 'sunderman.tamang@gmail.com', password : 'welcome'})
+      .get('/')
       .end((err, res) => {
         expect(res).to.have.status(200);
         done();
