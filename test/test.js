@@ -9,8 +9,8 @@ chai.use(chaiHttp);
 
 var API_SERVER = chai.request('localhost:4000');
 
-describe('/GET login', () => {
-    it('it should login', (done) => {
+describe('/GET /', () => {
+    it('it should get greeting message', (done) => {
       API_SERVER
       .get('/')
       .end((err, res) => {
