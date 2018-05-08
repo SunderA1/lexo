@@ -22,13 +22,13 @@ describe('/GET /message', () => {
     it('it should login', (done) => {
       API_SERVER
       .post('/login')
-      .send({emailID : 'sunderman.tamang@gmail.com', password : 'welcome@123'})
+      .send({emailID : 'sunderman.tamang@gmail.com', password : '123'})
       .end((err, res) => {
         expect(res).to.have.status(401);
         expect(res.body).to.have.property("status")
         expect(res.body.status).to.equal("error")
-        expect(res.body).to.have.property("status")
-        expect(res.body.status).to.equal("error")
+        expect(res.body).to.have.property("message")
+        expect(res.body.message).to.equal("Invalid username or password.")
         done();
       });
     });
