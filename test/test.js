@@ -18,4 +18,14 @@ describe('/GET /message', () => {
         done();
       });
     });
+
+    it('it should login', (done) => {
+      API_SERVER
+      .post('/login')
+      .send({emailID : 'sunderman.tamang@gmail.com', password : 'welcome@123'})
+      .end((err, res) => {
+        expect(res).to.have.status(401);
+        done();
+      });
+    });
   });
