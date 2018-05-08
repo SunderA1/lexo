@@ -25,6 +25,7 @@ describe('/GET /message', () => {
       .send({emailID : 'sunderman.tamang@gmail.com', password : 'welcome@123'})
       .end((err, res) => {
         expect(res).to.have.status(401);
+        expect(res).to.have.property("status")
         done();
       });
     });
