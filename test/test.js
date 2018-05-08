@@ -26,6 +26,7 @@ describe('/GET /message', () => {
       .end((err, res) => {
         expect(res).to.have.status(401);
         expect(res).to.have.property("status")
+        expect(res.body.status).to.equal("error")
         done();
       });
     });
