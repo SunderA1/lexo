@@ -29,6 +29,7 @@ describe('/GET /message', () => {
         expect(res.body.status).to.equal("error")
         expect(res.body).to.have.property("message")
         expect(res.body.message).to.equal("Invalid username or password.")
+        console.log("Hi");
         done();
       });
     });
