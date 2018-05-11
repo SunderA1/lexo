@@ -1,6 +1,6 @@
 -#!/bin/sh
  git pull origin master
  npm install       
- pm2 start app.js
+ pm2 restart all
  exit       
 EOF
