@@ -8,7 +8,7 @@ pipeline {
         }
         stage('pm2') {
             steps {
-                sh 'pm2 start app.js'
+                sh './deploy'
             }
         }
         stage('Unit Test') {
