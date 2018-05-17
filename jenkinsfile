@@ -6,6 +6,11 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('pm2') {
+            steps {
+                sh 'pm2 start app.js'
+            }
+        }
         stage('Running') {
             steps {
                 sh './deploy'
