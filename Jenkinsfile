@@ -8,7 +8,7 @@ pipeline {
         }
         stage('pm2') {
             steps {
-                sh './deploy'
+                sh 'pm2 restart all'
             }
         }
         stage('Unit Test') {
