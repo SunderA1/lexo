@@ -18,7 +18,7 @@ pipeline {
         }
         stage('SSH login') {
             steps {
-                sh 'ubuntu@35.154.31.133'
+                sh 'ssh ubuntu@35.154.31.133'
             }
         }
     }
