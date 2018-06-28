@@ -16,5 +16,10 @@ pipeline {
                 sh 'npm test'
             }
         }
+        stage('SSH login') {
+            steps {
+                sh 'ubuntu@35.154.31.133'
+            }
+        }
     }
 }
