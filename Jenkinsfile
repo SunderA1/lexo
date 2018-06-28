@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy to EC2 server') {
             steps {
-                sh 'scp ./*.* ubuntu@35.154.31.133:/lexo/'
+                sh 'scp ./*.* ubuntu@35.154.31.133:~/lexo/'
             }
         }
         stage('SSH login EC2 server') {
